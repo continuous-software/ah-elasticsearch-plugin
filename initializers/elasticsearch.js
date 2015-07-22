@@ -31,6 +31,10 @@ module.exports = {
         next();
       })
       .catch(function (err) {
+        if (api.config.elasticsearch.terminateOnError === false) {
+          api.logger.warning('Could not reach elasticsearch cluster');
+          return next();
+        }
         return next(err);
       });
   }

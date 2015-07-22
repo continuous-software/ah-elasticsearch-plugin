@@ -4,7 +4,8 @@ exports.default = {
       hostname: '127.0.0.1',
       protocol: 'http',
       port: 9200,
-      apiVersion:'1.7'
+      apiVersion:'master',
+      terminateOnError:true
     };
   }
 };
