@@ -1,6 +1,6 @@
 {
   "name": "ah-elasticsearch-plugin",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "actionhero plugin for elasticsearch",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
