@@ -21,6 +21,7 @@ module.exports = {
     next();
 
   },
+  startPriority: 1001,
   start: function (api, next) {
     var client = api.elasticsearch.createClient();
     client.ping({
