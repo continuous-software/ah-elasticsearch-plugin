@@ -23,12 +23,11 @@ module.exports = {
   },
   startPriority: 1001,
   start: function (api, next) {
-    var client = api.elasticsearch.createClient();
-    client.ping({
+    api.elasticsearch.client = api.elasticsearch.createClient();
+    api.elasticsearch.client.ping({
       requestTimeout: 30000
     })
       .then(function (response) {
-        api.elasticsearch.client = client;
         next();
       })
       .catch(function (err) {
